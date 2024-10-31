@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lier's Game</title>
+</head>
+<body>
+    <div id="root">
+        <main id="main">
+            <div id="game-info">
+                <span id="player">Ходит игрок: 0</span>
+                <span id="timer">Осталось: 0 секунд</span>
+            </div>
+
+            <fieldset class="players-count">
+                <legend>Введите количество игроков</legend>
+                <input id="players-count" type="number" min="2" max="4" maxlength="1">
+            </fieldset>
+
+            <div class="buttons">
+                <button onclick="RussianRoulet()">Сыграть в русскую рулетку</button>
+                <button onclick="Move()">Сделать ход</button>
+                <button id="stop" onclick="Stop()">Остановить ход</button>
+            </div>
+            
+            <div class="game">
+                <h3>Игра</h3>
+
+                <div id="game">
+                    <div id="output">
+                        <span>Вывод игры:</span>
+                    </div>
+
+                    <div id="info">
+                        <span>Информация:</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./formatter.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&family=Oswald:wght@200..700&family=Play:wght@400;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --bg-color: rgb(19, 19, 19);
+    --inner-color: rgb(28, 28, 28);
+    --sc-color: rgb(9, 9, 9);
+}
+
+html,
+body {
+    background-color: var(--bg-color);
+
+    *::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    *::-webkit-scrollbar-track {
+        background: var(--inner-color);
+        border-radius: 10px;
+    }
+    
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--bg-color);
+        border-radius: 10px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    color: white;
+
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+    transition: 0.25s;
+}
+
+button {
+    cursor: pointer;
+
+    height: 75px;
+    width: 175px;
+
+    border: 0;
+    border-radius: 10px;
+    background-color: var(--inner-color);
+}
+
+button:hover {
+    height: 80px;
+    width: 190px;
+}
+
+button:active {
+    height: 75px;
+    width: 175px;
+}
+
+.buttons {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#root {
+    position: absolute;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    position: relative;
+
+    padding: 10px 20px;
+    
+    width: 70%;
+    height: 80%;
+
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    gap: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 10px var(--sc-color);
+    background-color: var(--sc-color);
+}
+
+.players-count {
+    display: flex;  
+    justify-content: center;
+    padding: 0.25em 2em;
+
+    border-radius: 10px;
+}
+
+.players-count legend {
+    padding: 0 5px;
+}
+
+.players-count input {
+    border-radius: 10px;
+    border: 0;
+
+    background-color: white;
+    color: var(--bg-color);
+    
+    position: relative;
+    padding: 5px 10px;
+
+    height: 100%;
+    width: 60%;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+
+    height: 300px;
+    width: 100%;
+
+    background-color: var(--sc-color);
+}
+
+#game-info {
+    position: relative;
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+    width: 200px;
+
+    border-radius: 10px;
+
+    padding: 10px 20px;
+
+    background-color: var(--inner-color);
+}
+
+#game {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    padding: 10px 20px;
+
+    width: 90%;
+    height: 100%;
+    
+    border-radius: 10px;
+}
+
+#game div {
+    position: relative;
+    flex-direction: column;
+
+    min-width: 200px;
+    height: 100%;
+    width: 100%;
+
+    gap: 5px;
+    padding: 5px 10px;
+
+    border-radius: 10px;
+    background-color: var(--sc-color);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#game div * {
+    position: relative;
+    display: block;
+
+    padding: 10px 20px;
+
+    height: 30px;
+    width: 90%;
+
+    border-radius: 10px;
+    background-color: var(--bg-color);
+}
+
+#output {
+    border-radius: 10px 0 0 10px;
+}
+
+#info {
+    border-radius: 0 10px 10px 0;
+}
